@@ -82,3 +82,14 @@
     color: #000000;
     text-decoration: underline;
 }
+
+#registroForm #enviar{
+    color: #FFFFFF;
+    background-color: #000000;
+    opacity: 0.7;
+}
+
+#registroForm #enviar:hover{
+    opacity: 1;
+    cursor: pointer;
+}
