@@ -6,16 +6,14 @@
     <!-- ICONO PAGINA WEB -->
     <link rel="shortcut icon" href="../images/iconoPsg.ico">
     <!-- REFERENCIA ESTILOS -->
-    <link rel="stylesheet" href="../style/registroStyle.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
     <link rel="stylesheet" href="../style/indexStyle.css">
-    <link rel="stylesheet" href="../style/carritoStyle.css">
     <link rel="stylesheet" href="../bootStrap/css/bootstrap.css">
     <script src="../bootStrap/js/bootstrap.js"></script>
     <script src="../javaScript/code.js"></script>
-    <script src="../javaScript/codecarrito.js"></script>
+    <script src="../javaScript/validar-login.js"></script>
     <link href="../bootStrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../style/signin.css" rel="stylesheet">
+    <link href="../style/loginStyle.css" rel="stylesheet">
 </head>
 
 <body>
@@ -74,16 +72,17 @@
         <h1>Inicia sesión</h1>
     </div>
     <!-- CONTENEDOR LOGIN USUARIO -->
-    <form class="form-signin">
+    <form class="form-signin" action="loginExitoso.html" onsubmit="return validar()">
         <!-- <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72"
             height="72">-->
 
         <label for="inputEmail" class="sr-only">Correo electronico</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="ingrese correo electronico" required
-            autofocus>
+        <input type="text" id="inputEmail" class="form-control" placeholder="Ingrese correo electronico" autofocus>
+        <div id="mensajeEmail"></div>
         <br>
         <label for="inputPassword" class="sr-only">Contraseña</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Ingrese contraseña" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Ingrese contraseña">
+        <div id="mensajeContrasena"></div>
         <div class="checkbox mb-3">
             <br>
             <label>
@@ -91,6 +90,7 @@
             </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+        <!-- <input class="btn btn-lg btn-primary btn-block" type="submit" value="Ingresar">-->
     </form>
     <br>
 
