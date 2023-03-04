@@ -7,7 +7,15 @@
     <link rel="shortcut icon" href="../images/iconoPsg.ico">
     <!-- REFERENCIA ESTILOS -->
     <link rel="stylesheet" href="../style/registroStyle.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
     <link rel="stylesheet" href="../style/indexStyle.css">
+    <link rel="stylesheet" href="../style/carritoStyle.css">
+    <link rel="stylesheet" href="../bootStrap/css/bootstrap.css">
+    <script src="../bootStrap/js/bootstrap.js"></script>
+    <script src="../javaScript/code.js"></script>
+    <script src="../javaScript/codecarrito.js"></script>
+    <link href="../bootStrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../style/signin.css" rel="stylesheet">
 </head>
 
 <body>
@@ -42,7 +50,7 @@
                     <li>Ayuda</li>
                 </a>
                 <a href="login.html">
-                    <li>Mi cuenta</li>
+                    <li>Inicia sesión</li>
                 </a>
             </ul>
         </div>
@@ -62,57 +70,29 @@
         </div>
     </div>
 
-    <!-- CONTENEDOR REGISTRO USUARIO -->
-    <div id="contentRegistro">
-        <div>
-            <h1>Iniciar sesion</h1>
-        </div>
-        <div id="formularioRegistro">
-            <!-- FORMULARIO -->
-            <form action="#" id="registroForm">
-                <label for="">Nombres</label>
-                <input type="text" placeholder="Ingresa tu nombre" required>
-                <label for="">Apellido</label>
-                <input type="text" placeholder="Ingresa tu apellido" required>
-                <label for="">N° de DNI</label>
-                <input type="number" placeholder="Ingresa el numero de documento" maxlength="8" required>
-                <label for="">Fecha de nacimiento</label>
-                <input type="date" name="" id="" required>
-                <label for="">Correo Electrónico</label>
-                <input type="email" required placeholder="Ingresa tu correo : ejemplo@gmail.com">
-                <label for="">Celular</label>
-                <input type="number" required placeholder="Ingresa tu numero de celular">
-                <label for="">Contraseña</label>
-                <input type="password" required placeholder="Ingresa una contraseña">
-                <label for="">Confirmar contraseña</label><br>
-                <input type="password" required placeholder="Confirma tu contraseña">
-                <button formaction="#">Registrar</button>
-            </form>
-        </div>
+    <div id="tituloLogin">
+        <h1>Inicia sesión</h1>
     </div>
+    <!-- CONTENEDOR LOGIN USUARIO -->
+    <form class="form-signin">
+        <!-- <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72"
+            height="72">-->
 
-    <!-- INFORMACION DE TIENDA -->
-    <div id="acercaTienda">
-        <p>La tienda en línea oficial del Paris Saint-Germain enumera todos los artículos oficiales desarrollados
-            para los fanáticos del Club Parisien. Ya sea que esté buscando equipaciones auténticas del Paris
-            Saint-Germain para toda la familia o recuerdos para su colección de fans, aquí encontrará exactamente lo
-            que busca.<br>Compre su Camisetas 2021/22 del Paris Saint-Germain , así como equipaciones de tercero, cuarto
-            y
-            portero para hombres, mujeres y niños. El gran jugador Lionel Messi se ha unido oficialmente al PSG, y
-            tenemos todos los estilos de uniformes de Lionel Messi Paris Saint-Germain para elegir. Llevará el
-            número 30 para París, y puedes encontrar las camisetas de Messi Paris aquí en la tienda del PSG. Apoya a
-            tus jugadores favoritos con las camisetas de Neymar Jr y Kylian Mbappé, o personaliza una camiseta con
-            tu propio nombre y número para tu próxima salida al estadio. ¡Entrena como los profesionales con el
-            equipo de entrenamiento Nike, las zapatillas y todo nuestro equipo de fútbol! Mientras esté aquí, no se
-            olvide de recoger algunos accesorios oficiales Paris Saint-Germain para su hogar u oficina, disponible
-            exclusivamente en la tienda online PSG.<br>El oficial de Paris Saint-Germain El equipo de servicio al
-            cliente de la tienda en línea está
-            dedicado a brindarle, como fan, la mejor experiencia. Para obtener respuestas a preguntas frecuentes o
-            para obtener servicio al cliente, consulte nuestro menú fácil de usar para realizar compras sin
-            preocupaciones.
-        </p>
-        <img src="https://store3.psg.fr/content/ws/all/963d6613-363e-43e3-8f7a-6f752ae7f5c5__1600X287.png" alt="">
-    </div>
+        <label for="inputEmail" class="sr-only">Correo electronico</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="ingrese correo electronico" required
+            autofocus>
+        <br>
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Ingrese contraseña" required>
+        <div class="checkbox mb-3">
+            <br>
+            <label>
+                <input type="checkbox" value="remember-me"> Recordar contraseña
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+    </form>
+    <br>
 
     <!-- PIE DE PAGINA -->
     <div id="footer">

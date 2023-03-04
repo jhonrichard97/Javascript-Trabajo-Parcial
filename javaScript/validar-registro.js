@@ -13,10 +13,12 @@ function validar() {
     if (nombre == null || nombre.length == 0) {
         document.getElementById('textoNombre').innerHTML = "Ingresar nombre (obligatorio)";
         document.getElementById('textoNombre').style.color = "red";
+        location.href = "#nombre";
         return false;
     } else if (nombre.match(ExpRegNom) == null) {
         document.getElementById('textoNombre').innerHTML = "Ingresar nombre valido (solo letras)";
         document.getElementById('textoNombre').style.color = "red";
+        location.href = "#nombre";
         return false;
     } else {
         document.getElementById('textoNombre').innerHTML = "";
@@ -27,10 +29,12 @@ function validar() {
     if (apellido == null || apellido.length == 0) {
         document.getElementById('textoApellido').innerHTML = "Ingresar apellido (obligatorio)";
         document.getElementById('textoApellido').style.color = "red";
+        location.href = "#apellido";
         return false;
     } else if (apellido.match(ExpRegApe) == null) {
         document.getElementById('textoApellido').innerHTML = "Ingresar apellido valido (solo letras)";
         document.getElementById('textoApellido').style.color = "red";
+        location.href = "#apellido";
         return false;
     } else {
         document.getElementById('textoApellido').innerHTML = "";
@@ -41,14 +45,17 @@ function validar() {
     if (numDni == null || numDni.length == 0) {
         document.getElementById('textoDni').innerHTML = "Ingresar dni (obligatorio)";
         document.getElementById('textoDni').style.color = "red";
+        location.href = "#dni";
         return false;
     } else if (numDni.match(ExpRegDni) == null) {
         document.getElementById('textoDni').innerHTML = "Ingresar dni valido (solo numeros)";
         document.getElementById('textoDni').style.color = "red";
+        location.href = "#dni";
         return false;
     } else if (numDni.length != 8) {
         document.getElementById('textoDni').innerHTML = "Ingresar dni valido (8 digitos)";
         document.getElementById('textoDni').style.color = "red";
+        location.href = "#dni";
         return false;
     } else {
         document.getElementById('textoDni').innerHTML = "";
@@ -63,14 +70,17 @@ function validar() {
     if (nacimiento == null || nacimiento.length == 0) {
         document.getElementById('textoNacimiento').innerHTML = "Ingresar fecha de nacimiento (obligatorio)";
         document.getElementById('textoNacimiento').style.color = "red";
+        location.href = "#nacimiento";
         return false;
     } else if (nacimiento.match(ExpRegNacimiento) == null) {
         document.getElementById('textoNacimiento').innerHTML = "Ingresar fecha de nacimiento valido";
         document.getElementById('textoNacimiento').style.color = "red";
+        location.href = "#nacimiento";
         return false;
     } else if ((anioActual - anioUser) < 18) {
         document.getElementById('textoNacimiento').innerHTML = "Debe ser mayor de edad (+18) para registrar usuario";
         document.getElementById('textoNacimiento').style.color = "red";
+        location.href = "#nacimiento";
         return false;
     } else {
         document.getElementById('textoNacimiento').innerHTML = "";
@@ -81,14 +91,17 @@ function validar() {
     if (celular == null || celular.length == 0) {
         document.getElementById('textoCelular').innerHTML = "Ingresar celular (obligatorio)";
         document.getElementById('textoCelular').style.color = "red";
+        location.href = "#celular";
         return false;
     } else if (celular.match(ExpRegCel) == null) {
         document.getElementById('textoCelular').innerHTML = "Ingresar celular valido (solo numeros)";
         document.getElementById('textoCelular').style.color = "red";
+        location.href = "#celular";
         return false;
     } else if (celular.length != 9) {
         document.getElementById('textoCelular').innerHTML = "Ingresar celular valido (9 digitos)";
         document.getElementById('textoCelular').style.color = "red";
+        location.href = "#celular";
         return false;
     } else {
         document.getElementById('textoCelular').innerHTML = "";
@@ -99,10 +112,12 @@ function validar() {
     if (correo == null || correo.length == 0) {
         document.getElementById('textoCorreo').innerHTML = "Ingresar correo (obligatorio)";
         document.getElementById('textoCorreo').style.color = "red";
+        location.href = "#correo";
         return false;
     } else if (correo.match(ExpRegCorreo) == null) {
         document.getElementById('textoCorreo').innerHTML = "Ingresar correo valido";
         document.getElementById('textoCorreo').style.color = "red";
+        location.href = "#correo";
         return false;
     } else {
         document.getElementById('textoCorreo').innerHTML = "";
@@ -110,10 +125,11 @@ function validar() {
 
     //VALIDAR CONTRASEÑA
     var ExpRegContrasena = /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/;
-    let primeroContra = contrasena;
+
     if (contrasena == null || contrasena.length == 0) {
         document.getElementById('textoContrasena').innerHTML = "Ingresar contraseña (obligatorio)";
         document.getElementById('textoContrasena').style.color = "red";
+        location.href = "#correo";
         return false;
     } else if (contrasena.match(ExpRegContrasena) == null) {
         document.getElementById('textoContrasena').innerHTML = "La contraseña debe contener :";
@@ -123,6 +139,7 @@ function validar() {
         document.getElementById('textoContrasena').innerHTML += "<br>Un caracter especial";
         document.getElementById('textoContrasena').innerHTML += "<br>Minimo 8 digitos";
         document.getElementById('textoContrasena').style.color = "red";
+        location.href = "#correo";
         return false;
     } else {
         document.getElementById('textoContrasena').innerHTML = "";
@@ -132,10 +149,12 @@ function validar() {
     if (contrasenaConfirmar == null || contrasenaConfirmar.length == 0) {
         document.getElementById('textoContrasenaConfirmar').innerHTML = "Ingresar contraseña nuevamente (obligatorio)";
         document.getElementById('textoContrasenaConfirmar').style.color = "red";
+        location.href = "#contrasenaConfirmar";
         return false;
     } else if (contrasena != contrasenaConfirmar) {
         document.getElementById('textoContrasenaConfirmar').innerHTML = "La contraseña no coincide";
         document.getElementById('textoContrasenaConfirmar').style.color = "red";
+        location.href = "#contrasenaConfirmar";
         return false;
     } else {
         document.getElementById('textoContrasenaConfirmar').innerHTML = "";
@@ -145,21 +164,19 @@ function validar() {
     if (document.getElementById('check1').checked != true) {
         document.getElementById('textoCheck1').innerHTML = "Debe aceptar la opcion para registrar el usuario";
         document.getElementById('textoCheck1').style.color = "red";
-        console.log("ejecuta if check 1");
+        location.href = "#check1";
         return false
     } else {
         document.getElementById('textoCheck1').innerHTML = "";
-        console.log("ejecuta else check 1");
     }
 
     //VALIDAR CHECK 2
     if (document.getElementById('check2').checked != true) {
         document.getElementById('textoCheck2').innerHTML = "Debe aceptar la opcion para registrar el usuario";
         document.getElementById('textoCheck2').style.color = "red";
-        console.log("ejecuta if check 2");
+        location.href = "#check2";
         return false
     } else {
         document.getElementById('textoCheck2').innerHTML = "";
-        console.log("ejecuta else check 2");
     }
 }
