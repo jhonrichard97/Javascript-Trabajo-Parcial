@@ -1,7 +1,3 @@
-class Usuario {
-    nomUsuario;
-}
-
 function validar() {
     let usuario = document.getElementById('inputEmail').value;
     let contrasena = document.getElementById('inputPassword').value;
@@ -32,7 +28,38 @@ function validar() {
         document.getElementById('mensajeContrasena').innerHTML = "";
     }
 
-    const usuario1 = new Usuario();
-    usuario1.nomUsuario = usuario;
-    alert(usuario1.nomUsuario);
+    var correoCookie;
+    var contraCookie;
+
+    function obtenerCookie(name) {
+        let cookie = {};
+        let varUser;
+        document.cookie.split(';').forEach(function (el) {
+            let [k, v] = el.split('=');
+            cookie[k.trim()] = v;
+        })
+        //DEPURAR EL OBJETO COOKIE
+        if(cookie[name]==undefined){
+            return false;
+        }
+        varUser = cookie[name].replace('}', '').replace("{", "").replace(/['"]+/g, '');
+        varUser = varUser.split(",");
+        console.log(varUser);
+        //GUARDO LOS VALORES
+        correoCookie = varUser[1].slice(7);
+        contraCookie = varUser[2].slice(11);
+        if(correoCookie==usuario && contraCookie==contrasena){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    if(obtenerCookie(usuario)==false){
+        document.getElementById('mensajeContrasena').innerHTML = "Usurio y/o contraseña incorrecto";
+        document.getElementById('mensajeContrasena').style.color = "red";
+        return false;
+    }else{
+        document.getElementById('mensajeContrasena').innerHTML = "";
+    }
 }

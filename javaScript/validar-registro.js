@@ -19,11 +19,11 @@ class Usuario {
         this.contraConfirmaUsuario = contraConfirmaUsuario;
     }
 
-    get getnomUsuario(){
+    get getnomUsuario() {
         return this.nomUsuario;
     }
 
-    get getcorreoUsuario(){
+    get getcorreoUsuario() {
         return this.correoUsuario;
     }
 }
@@ -210,9 +210,18 @@ function validar() {
         document.getElementById('textoCheck2').innerHTML = "";
     }
 
+    //posterior la validacion ingresamos los datos en una clase
     const dniUsuario = new Usuario(nombre, apellido, numDni, nacimiento, celular, correo, contrasena, contrasenaConfirmar);
     console.log(dniUsuario);
     console.log(dniUsuario.getnomUsuario);
 
     alert("Bienvenido : " + dniUsuario.getnomUsuario + " se envio un correo a " + dniUsuario.getcorreoUsuario + " para su confirmacion.");
+
+    //guardamos los datos en una cookie de manera temporal
+    let usuario = {
+        "dni":numDni,
+        "correo": correo,
+        "contrasena": contrasena
+    }
+    document.cookie = correo + "=" + JSON.stringify(usuario);
 }
