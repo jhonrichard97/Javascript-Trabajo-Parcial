@@ -1,3 +1,6 @@
+class Usuario {
+    nomUsuario;
+}
 
 function validar() {
     let usuario = document.getElementById('inputEmail').value;
@@ -28,5 +31,8 @@ function validar() {
     } else {
         document.getElementById('mensajeContrasena').innerHTML = "";
     }
-    alert("adad");
+
+    const usuario1 = new Usuario();
+    usuario1.nomUsuario = usuario;
+    alert(usuario1.nomUsuario);
 }

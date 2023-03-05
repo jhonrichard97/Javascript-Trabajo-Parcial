@@ -3,15 +3,18 @@
   margin-right: 50px;
 }
 
-#tituloLogin div {
-  padding-bottom: 25px;
-}
-
 #tituloLogin h1 {
   background-color: #000000;
   color: #FFFFFF;
   padding-top: 20px;
   padding-bottom: 20px;
+  text-align: center;
+}
+
+#tituloLogin div {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -21,9 +24,11 @@
   padding: 15px;
   margin: 0 auto;
 }
+
 .form-signin .checkbox {
   font-weight: 400;
 }
+
 .form-signin .form-control {
   position: relative;
   box-sizing: border-box;
@@ -31,21 +36,24 @@
   padding: 10px;
   font-size: 16px;
 }
+
 .form-signin .form-control:focus {
   z-index: 2;
 }
+
 .form-signin input[type="email"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+
 .form-signin input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.form-control:focus{
+.form-control:focus {
   border: #000000 1px solid;
 }
 
@@ -53,21 +61,20 @@
   background-color: #000000;
   opacity: 0.7;
   border: none;
-} 
+}
 
 .form-signin button:hover {
   background-color: #000000;
   opacity: 1;
   border: none;
-} 
+}
 
 .form-signin button:focus {
   background-color: #000000;
   opacity: 1;
-} 
+}
 
 .form-signin button:active {
   background-color: #000000 !important;
   opacity: 1 !important;
-} 
-
+}

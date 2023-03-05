@@ -1,3 +1,33 @@
+class Usuario {
+    nomUsuario;
+    apeUsuario;
+    dniUsuario;
+    naciUsuario;
+    celUsuario;
+    correoUsuario;
+    contraUsuario;
+    contraConfirmaUsuario;
+
+    constructor(nomUsuario, apeUsuario, dniUsuario, naciUsuario, celUsuario, correoUsuario, contraUsuario, contraConfirmaUsuario) {
+        this.nomUsuario = nomUsuario;
+        this.apeUsuario = apeUsuario;
+        this.dniUsuario = dniUsuario;
+        this.naciUsuario = naciUsuario;
+        this.celUsuario = celUsuario;
+        this.correoUsuario = correoUsuario;
+        this.contraUsuario = contraUsuario;
+        this.contraConfirmaUsuario = contraConfirmaUsuario;
+    }
+
+    get getnomUsuario(){
+        return this.nomUsuario;
+    }
+
+    get getcorreoUsuario(){
+        return this.correoUsuario;
+    }
+}
+
 function validar() {
     let nombre = document.getElementById('nombre').value;
     let apellido = document.getElementById('apellido').value;
@@ -179,4 +209,10 @@ function validar() {
     } else {
         document.getElementById('textoCheck2').innerHTML = "";
     }
+
+    const dniUsuario = new Usuario(nombre, apellido, numDni, nacimiento, celular, correo, contrasena, contrasenaConfirmar);
+    console.log(dniUsuario);
+    console.log(dniUsuario.getnomUsuario);
+
+    alert("Bienvenido : " + dniUsuario.getnomUsuario + " se envio un correo a " + dniUsuario.getcorreoUsuario + " para su confirmacion.");
 }
