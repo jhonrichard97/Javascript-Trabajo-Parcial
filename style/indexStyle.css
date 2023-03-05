@@ -146,6 +146,15 @@
     margin-top: 10px;
 }*/
 
+#contenedorProducto {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#contenedorProducto div {
+    padding-bottom: 25px;
+}
+
 #contenedorProducto h2{
     background-color: #000000;
     color: #FFFFFF;

@@ -1,3 +1,4 @@
+
 function validar() {
     let usuario = document.getElementById('inputEmail').value;
     let contrasena = document.getElementById('inputPassword').value;
@@ -27,4 +28,5 @@ function validar() {
     } else {
         document.getElementById('mensajeContrasena').innerHTML = "";
     }
+    alert("adad");
 }
